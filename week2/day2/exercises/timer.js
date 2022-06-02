@@ -28,3 +28,16 @@ An input is a negative number: Ignore/skip any numbers that are negative. We can
 An input is not a number: Ignore/skip these as well, instead of attempting to call setTimeout with a non-number.
 
 */
+const alarm=()=>{
+    const input=process.argv;
+    input.forEach(element=>{
+            const inputValue=parseInt(element)
+            if(inputValue>0&& typeof inputValue==="number"){
+                setTimeout(()=>{
+                    console.log("beeep beeep")
+                },1000*inputValue)
+            }
+    })
+}
+alarm();
+

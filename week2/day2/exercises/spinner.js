@@ -9,7 +9,7 @@ We can use the special character \r to return our cursor back to the beginning o
 
 Let's try it out!
 
-process.stdout.write('hello from spinner1.js... \rheyyy\n');
+ process.stdout.write('hello from spinner1.js... \rheyyy\n');
 
 Output:
 
@@ -51,3 +51,16 @@ You can use a regular loop or setInterval to make it work.
 Bonus: You can try to remove all these repetitive setTimeouts to and make a shorter and cleaner code.
 
 */
+let z=0
+let maxSpin=4;
+const spinner=()=>{
+  for(i=1;i<maxSpin;i++){
+    setTimeout(() => {
+      process.stdout.write('\r|   ');
+      process.stdout.write('\r/   ');
+      process.stdout.write('\r-   ');
+      process.stdout.write('\r\\   \n') 
+    }, 1000*i);
+  }}
+
+console.log(spinner())
